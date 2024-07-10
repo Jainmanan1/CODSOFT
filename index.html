@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Free Webinar - Master Your Finances</title>
+    <meta name="description" content="Join our free webinar and discover practical strategies to manage your money effectively and achieve your financial goals. Register now to secure your spot!">
+    <meta name="keywords" content="webinar, personal finance, financial tips, money management, financial freedom">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Lato', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+            overflow-x: hidden;
+        }
+        .container {
+            max-width: auto;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            animation: fadeIn 1s ease-in-out;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        .content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            width: 100%;
+            animation: slideUp 1s ease-in-out;
+        }
+        @keyframes slideUp {
+            from { transform: translateY(20px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+        .header-image-wrapper {
+            position: relative;
+            width: 100%;
+            text-align: left;
+        }
+        h1 {
+            color: #fff;
+            margin: 20px;
+            font-family: 'Trebuchet MS', sans-serif sans-serif;
+            font-weight: 700;
+            position: absolute;
+            top: 20px;
+            color: rgba(0, 0, 0, 1);
+            padding: 10px;
+            border-radius: 5px;
+            z-index: 1;
+            animation: fadeInDown 1s ease-in-out;
+            left: 5%;
+        }
+      
+        @keyframes fadeInDown {
+            from { transform: translateY(-20px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+        h2 {
+            color: #555;
+            font-weight: 300;
+            margin-bottom: 30px;
+            font-family: 'Roboto', sans-serif;
+            animation: fadeIn 1s ease-in-out 0.5s forwards;
+            opacity: 0;
+        }
+        .key-stat {
+            font-size: 2em;
+            color: #28a745;
+            font-weight: bold;
+            margin-bottom: 20px;
+            animation: bounceIn 1s ease-in-out;
+        }
+        img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+            border-radius: 8px;
+            position: relative;
+            z-index: 0;
+            animation: fadeIn 1s ease-in-out;
+        }
+        .benefits, .testimonials {
+            text-align: left;
+            margin: 20px 0;
+            width: 100%;
+            animation: slideUp 1s ease-in-out;
+        }
+        .benefits ul {
+            list-style: none;
+            padding: 0;
+        }
+        .benefits ul li {
+            position: relative;
+            padding-left: 30px;
+            margin: 10px 0;
+            font-size: 1.1em;
+            animation: fadeIn 1s ease-in-out;
+            display: flex;
+            align-items: center;
+        }
+        .benefits ul li::before {
+            content: '';
+            width: 20px;
+            height: 20px;
+            background-image: url('tick.png');
+            background-size: cover;
+            margin-right: 10px;
+            flex-shrink: 0;
+        }
+        .benefits ul li span {
+            animation: fadeInLeft 1s ease-in-out;
+        }
+        @keyframes fadeInLeft {
+            from { transform: translateX(-20px); opacity: 0; }
+            to { transform: translateX(0); opacity: 1; }
+        }
+        .testimonials {
+            background-color: #f9f9f9;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            animation: fadeIn 1s ease-in-out;
+        }
+        .testimonials h3 {
+            margin-top: 0;
+        }
+        .testimonials p {
+            font-style: italic;
+            margin: 10px 0;
+        }
+        .testimonials p::before, .testimonials p::after {
+            content: '"';
+            font-size: 1.5em;
+            vertical-align: top;
+            color: #ccc;
+        }
+
+        #spot{
+           top: 40%;
+            position: absolute;
+            left: 10%;
+        }
+        .cta {
+            margin: 30px 0;
+            text-align: center;
+            animation: slideUp 1s ease-in-out;
+        }
+        .cta button {
+            background-color: #28a745;
+            color: white;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1.2em;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+            animation: bounceIn 1s ease-in-out;
+            outline: none;
+        }
+       
+        @keyframes bounceIn {
+            from { transform: scale(0.5); opacity: 0; }
+            to { transform: scale(1); opacity: 1; }
+        }
+        .cta button:hover {
+            background-color: #3e8e41;
+            transform: scale(1.05);
+        }
+        /* .form-group {
+            margin: 15px 0;
+            animation: fadeIn 1s ease-in-out;
+        }
+        .form-group input {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+           
+        } */
+        form {
+display: flex;
+flex-direction: column; 
+width: fit-content;
+margin: 0 auto; 
+padding: 20px;
+border-radius: 5px; 
+background-color: #f0f0f0;
+transition: border-color 0.3s ease;
+}
+label {
+margin-bottom: 5px; 
+font-weight: bold; 
+}
+input[type="text"],
+input[type="email"] {
+padding: 10px;
+border: 1px solid #ccc; 
+border-radius: 3px; 
+font-size: 16px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+        .form-group input:focus {
+            border-color: #007bff;
+            outline: none;
+        }
+        @media (max-width: 768px) {
+            .container {
+                padding: 10px;
+            }
+            .header-image-wrapper h1 {
+                font-size: 1.5em;
+                left: 10px;
+                top: 10px;
+            }
+            #register {
+                top: 60px;
+                left: 10px;
+              
+            }
+
+            #spot{
+                font-size: .5em;
+            }
+
+        }
+
+       
+        @media (max-width: 636px) {
+            .header-image-wrapper h1 {
+                font-size: 1em;
+            }
+            #spot{
+                font-size: .5em;
+            }
+        }
+        @media (max-width: 480px) {
+            .content {
+                padding: 0;
+            }
+            h1 {
+                font-size: 1.2em;
+                margin: 10px;
+                left: 5px;
+                top: 5px;
+            }
+            h2 {
+                font-size: 1em;
+            }
+            .key-stat {
+                font-size: 1.5em;
+            }
+            #register  {
+                top: 50px;
+                left: 5px;
+            }
+            #spot{
+                font-size: .5em;
+            }
+        }
+        @media (max-width: 460px) {
+            .header-image-wrapper h1,#spot {
+                font-size: .8em;
+            }
+            .key-stat {
+                font-size: 1.2em;
+            }
+            #spot{
+                font-size: .5em;
+            }
+        }
+
+        @media (max-width: 460px) {
+
+            #spot{
+                font-size: .5em;
+               
+            }
+            #btn1{
+                padding: 9px;
+            }
+
+        }
+
+
+
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="content">
+            <span class="header-image-wrapper">
+                <h1>Unlock Financial Freedom:<br> Join Our Exclusive Webinar!</h1>
+                <img src="finance11.png" alt="Webinar Image">
+                <div id="spot" class="cta">
+                    <a href="#register"><button id="btn1">Get Your Free Budget Guide</button></a>
+                </div>
+            </span>
+            <h2>Discover practical strategies to manage your money effectively and achieve your financial goals.</h2>
+            <div class="key-stat">92% Positive Returns for Our Attendees!</div>
+            <div class="benefits">
+                <h3>Benefits and Features:</h3>
+                <ul>
+                    <li><span>Expert Advice: Insights from seasoned financial advisors.</span></li>
+                    <li><span>Practical Tips: Actionable steps to improve your financial health.</span></li>
+                    <li><span>Interactive Q&A: Get your questions answered live.</span></li>
+                    <li><span>Resource Materials: Access to downloadable worksheets and tools.</span></li>
+                </ul>
+            </div>
+            <div class="testimonials">
+                <h3>What People Are Saying:</h3>
+                <p>"The best financial advice I've received!" - Sarah K., Webinar Attendee</p>
+                <p>Join over 500 individuals who have already registered!</p>
+            </div>
+            <div class="form">
+                <form action="submit_form.php" method="post">
+                    <div class="form-group">
+                        <input type="text" name="name" placeholder="Name" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" name="email" placeholder="Email Address" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" name="age_group" placeholder="Age Group (optional)">
+                    </div>
+                   
+                    <div id="register" class="cta">
+                        <button type="submit">Register Now</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
